@@ -76,6 +76,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void onOperationClick(View view) {
         switch (view.getId()){
+            case R.id.btn_percent:
+                firstVar = Double.parseDouble(tv_Result.getText().toString());
+                isOperationClick = true;
+                operation = "%";
+                break;
             case R.id.btn_plus:
                 firstVar = Double.parseDouble(tv_Result.getText().toString());
                 isOperationClick = true;
@@ -100,6 +105,10 @@ public class MainActivity extends AppCompatActivity {
                 secondVar = Double.parseDouble(tv_Result.getText().toString());
                 Double result = 0.0;
                 switch (operation){
+                    case "%":
+                        result = (firstVar / 100.0f);
+                        tv_Result.setText(result.toString());
+                        break;
                     case "+":
                          result = firstVar + secondVar;
                         tv_Result.setText(result.toString());
@@ -119,6 +128,5 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
         }
-
     }
 }
