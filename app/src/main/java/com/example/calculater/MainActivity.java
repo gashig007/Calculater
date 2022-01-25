@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_point:
                 setTv_Result(".");
+                break;
         }
     }
 
