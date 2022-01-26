@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()){
             case R.id.btn_one:
                 setTv_Result("1");
-
                 break;
             case R.id.btn_two:
                 setTv_Result("2");
@@ -78,32 +77,32 @@ public class MainActivity extends AppCompatActivity {
     public void onOperationClick(View view) {
         switch (view.getId()){
             case R.id.btn_percent:
-                firstVar = Double.parseDouble(tv_Result.getText().toString());
+                setFirstVar();
                 isOperationClick = true;
                 operation = "%";
                 break;
             case R.id.btn_plus:
-                firstVar = Double.parseDouble(tv_Result.getText().toString());
+                setFirstVar();
                 isOperationClick = true;
                 operation = "+";
                 break;
             case R.id.btn_minus:
-                firstVar = Double.parseDouble(tv_Result.getText().toString());
+                setFirstVar();
                 isOperationClick = true;
                 operation = "-";
                 break;
             case R.id.btn_multiplication:
-                firstVar = Double.parseDouble(tv_Result.getText().toString());
+                setFirstVar();
                 isOperationClick = true;
                 operation = "X";
                 break;
             case R.id.btn_division:
-                firstVar = Double.parseDouble(tv_Result.getText().toString());
+                setFirstVar();
                 isOperationClick = true;
                 operation = "/";
                 break;
             case R.id.btn_equals:
-                secondVar = Double.parseDouble(tv_Result.getText().toString());
+                setSecondVar();
                 Double result = 0.0;
                 switch (operation){
                     case "%":
@@ -129,5 +128,13 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
         }
+    }
+
+    public void setFirstVar() {
+        firstVar = Double.parseDouble(tv_Result.getText().toString());
+    }
+
+    public void setSecondVar() {
+        secondVar = Double.parseDouble(tv_Result.getText().toString());
     }
 }
