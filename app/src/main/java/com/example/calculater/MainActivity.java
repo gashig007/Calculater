@@ -60,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_point:
                 setTv_Result(".");
                 break;
+            case R.id.btn_negative_number:
+                setTv_Result("-");
+                break;
         }
     }
 

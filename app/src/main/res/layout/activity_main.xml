@@ -50,6 +50,8 @@
             <com.google.android.material.button.MaterialButton
                 style="@style/Gray.Button"
                 android:text="+/-"
+                android:id="@+id/btn_negative_number"
+                android:onClick="onNumberClick"
                 android:layout_marginHorizontal="18dp"
                 />
 
