@@ -2,8 +2,10 @@ package com.example.calculater;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,12 +14,23 @@ public class MainActivity extends AppCompatActivity {
     private Double secondVar;
     private Boolean isOperationClick;
     private String operation;
+    private Button btn_next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tv_Result = findViewById(R.id.tv_result);
+        btn_next = findViewById(R.id.btn_next);
+        btn_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                String result = tv_Result.getText().toString();
+                intent.putExtra("result", result);
+                startActivity(intent);
+            }
+        });
     }
 
     public void onNumberClick(View view) {
@@ -64,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 setTv_Result("-");
                 break;
         }
+        btn_next.setVisibility(View.INVISIBLE);
     }
 
     public void setTv_Result(String numbers) {
@@ -78,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onOperationClick(View view) {
+        btn_next.setVisibility(View.INVISIBLE);
         switch (view.getId()){
             case R.id.btn_percent:
                 setFirstVar();
@@ -107,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_equals:
                 setSecondVar();
                 Double result = 0.0;
+                btn_next.setVisibility(View.VISIBLE);
                 switch (operation){
                     case "%":
                         result = (firstVar / 100.0f);
