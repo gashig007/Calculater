@@ -20,9 +20,10 @@
         android:layout_marginTop="60dp"/>
 
     <EditText
+        android:drawableEnd="@drawable/ic_arrow_right"
         android:background="@drawable/background"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:paddingStart="15dp"
         android:id="@+id/policy"
         android:layout_width="match_parent"
@@ -34,9 +35,10 @@
         android:layout_marginHorizontal="15dp"/>
 
     <EditText
+        android:drawableEnd="@drawable/ic_arrow_right"
         android:background="@drawable/background"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:paddingStart="15dp"
         android:id="@+id/product_category"
         android:layout_width="match_parent"
@@ -48,10 +50,10 @@
         android:layout_marginHorizontal="15dp"/>
 
     <EditText
-
+        android:drawableEnd="@drawable/ic_arrow_right"
         android:background="@drawable/background"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:paddingStart="15dp"
         android:id="@+id/origin_country"
         android:layout_width="match_parent"
@@ -63,9 +65,10 @@
         android:layout_marginHorizontal="15dp"/>
 
     <EditText
+        android:drawableEnd="@drawable/ic_arrow_right"
         android:background="@drawable/background"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:paddingStart="15dp"
         android:id="@+id/brand"
         android:layout_width="match_parent"
@@ -100,6 +103,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
